@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div user-container *ngIf="user$ | async">
+  <p>{{ (user$ | async)?.name }}</p>
+  <p>{{ (user$ | async)?.lastLoggedIn }}</p>
+</div>
+<br/>
+<app-todo-list></app-todo-list>
+<br/>
+<app-todo-create></app-todo-create>

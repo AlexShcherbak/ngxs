@@ -1,0 +1,9 @@
+<p>todos:</p>
+<div *ngFor="let todo of todos$ | async">
+  <app-todo-item [todo]="todo"></app-todo-item>
+</div>
+<br/>
+<div *ngIf="(todos$ | async).length">
+  <input type="text" [(ngModel)]="deleteId" placeholder="Enter id of todo to remove" />
+  <button (click)="deleteTodo()">Delete Todo</button>
+</div>
